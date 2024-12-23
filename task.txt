@@ -1,0 +1,26 @@
+// npm init
+// npm install prompt-sync
+// npm install body-parser
+// npm install express
+// npm install mongoose
+
+
+
+/*
+    npm init -y: create package.json --> setting up a new Node.js
+    npm install prompt-sync: for install prompt
+
+    body-parser: middleware It is responsible for parsing 
+        the incoming request bodies
+    
+    mongoose: is module in npm package contain a lot
+        of functionality to deal with DB
+*/
+
+
+
+
+
+
+
+
