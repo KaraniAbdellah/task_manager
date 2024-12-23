@@ -69,5 +69,13 @@
 */
 
 
+// More Concepts
+/*
+    - Schema: Defines the structure of the data (fields and types).
+    - Model: Represents a collection in the database and provides
+        methods to interact with it.
+    - Collection: The group of documents (data) in the database
+        (created automatically by Mongoose using the model).
+*/
 
 
