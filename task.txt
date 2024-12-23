@@ -3,24 +3,69 @@
 // npm install body-parser
 // npm install express
 // npm install mongoose
-
+// npm install -g nodemon --> installed globally
 
 
 /*
     npm init -y: create package.json --> setting up a new Node.js
     npm install prompt-sync: for install prompt
 
-    body-parser: middleware It is responsible for parsing 
-        the incoming request bodies
+    body-parser: is a middleware used in Express to read and parse incoming request data
     
     mongoose: is module in npm package contain a lot
         of functionality to deal with DB
+
+    What is The Deffrente Between MongoDb Compass & MongoDb Atlas & Nodemon
+
+        - MongoDB Compass: is a graphical user interface (GUI) has a lot of features 
+            like databases visually, providing features like data exploration,
+            querying, schema analysis, and performance monitoring.*
+
+        - MongoDB Atlas:  is a fully managed cloud database service that enables
+             users to easily deploy, manage, and scale MongoDB databases.
+
+        - The cloud is like using a service or storing data online instead
+            of on your own computer. You can access it from anywhere with the internet.
+        
+        - Note: the data store in DB as BSON format (like JSON format)
+    
+        - Nodemon is a utility tool for Node.js applications that automatically restarts the server
+            whenever there are changes to the source code
 */
 
 
 
+// Life Cycle Transfer the Data to DB:
+/*
+    To store user data in MongoDB (using Compass for managing the data), you need to:
 
+        - Create a server to handle requests. --> use Express
+        - Send requests to the server. --> server send data to DB
+        - The server will then store the data in MongoDB. --> You can use MongoDB Compass to view and manage the dat
+*/
 
+// Deal With DB
+/*
+    To CRUD from DB:
+        POST /api/tasks : add Data to DB
+        GET /api/tasks : Get the Data from DB
+        PUT /api/tasks/:id : Update Date in DB 
+        DELETE /api/tasks/:id: Delete from DB
+*/
 
+// Details in CRUD with DB
+/*
+    1. Store Data in the Database: First, you send a request 
+        (like a POST request) to the server to store data in the database.
+
+    2. Server Handles the Request: The server processes
+        the request and performs the CRUD operation on the database. For example:
+        For adding data: It uses POST to store data.
+        For fetching data: It uses GET to retrieve data.
+        For updating data: It uses PUT to modify data.
+        For deleting data: It uses DELETE to remove data.
+    
+    3. Send Response Back from DB to Server.
+*/
 
 
