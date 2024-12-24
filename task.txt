@@ -4,6 +4,7 @@
 // npm install express
 // npm install mongoose
 // npm install -g nodemon --> installed globally
+// install MongoDb Compass
 
 
 /*
@@ -12,14 +13,13 @@
 
     body-parser: is a middleware used in Express to read and parse incoming request data
     
-    mongoose: is module in npm package contain a lot
-        of functionality to deal with DB
+    mongoose: promise-based object data modeling (ODM) library for the Node.js framework,
+        and it is modole in npm has a lot of functionality to intercat with DB (NoSQL)
 
     What is The Deffrente Between MongoDb Compass & MongoDb Atlas & Nodemon
 
         - MongoDB Compass: is a graphical user interface (GUI) has a lot of features 
-            like databases visually, providing features like data exploration,
-            querying, schema analysis, and performance monitoring.*
+            like databases visually, store data in collection
 
         - MongoDB Atlas:  is a fully managed cloud database service that enables
              users to easily deploy, manage, and scale MongoDB databases.
@@ -33,15 +33,29 @@
             whenever there are changes to the source code
 */
 
+// Inside the Database
+/*
+    - A collection is a group of documents (like JSON objects).
+    - A schema defines the structure of those documents. (filieds, types, ...)
+    - A model is a tool in Mongoose that uses the schema to interact with the collection.
+*/
 
 
 // Life Cycle Transfer the Data to DB:
 /*
-    To store user data in MongoDB (using Compass for managing the data), you need to:
-
+    To store user data in MongoDB you need to:
         - Create a server to handle requests. --> use Express
         - Send requests to the server. --> server send data to DB
-        - The server will then store the data in MongoDB. --> You can use MongoDB Compass to view and manage the dat
+        - The server will then store the data in MongoDB. --> You can use MongoDB Compass to view and manage the data
+
+    In Details:
+        define Routes (POST, GET, PUT, PATCH) --> with server
+        Use PostMan to send request Database:
+            "http://localhost:3000/post"
+            "http://localhost:3000/get"
+            "http://localhost:3000/put"
+            "http://localhost:3000/patch"
+        Run the App and make server listen to post 3000
 */
 
 // Deal With DB
@@ -53,19 +67,15 @@
         DELETE /api/tasks/:id: Delete from DB
 */
 
-// Details in CRUD with DB
-/*
-    1. Store Data in the Database: First, you send a request 
-        (like a POST request) to the server to store data in the database.
 
-    2. Server Handles the Request: The server processes
-        the request and performs the CRUD operation on the database. For example:
-        For adding data: It uses POST to store data.
-        For fetching data: It uses GET to retrieve data.
-        For updating data: It uses PUT to modify data.
-        For deleting data: It uses DELETE to remove data.
-    
-    3. Send Response Back from DB to Server.
-*/
+
+
+
+
+
+
+
+https://medium.com/@tomorchandraroy884/how-to-connect-mongodb-with-node-js-using-mongoose-a0c772dfb1ca
+
 
 
