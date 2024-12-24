@@ -1,155 +1,60 @@
-<<<<<<< HEAD:task.txt
 // npm init
 // npm install prompt-sync
 // npm install body-parser
 // npm install express
 // npm install mongoose
-// npm install -g nodemon --> installed globally
+// npm install -g nodemon
 // install MongoDb Compass
 
 
 /*
-    npm init -y: create package.json --> setting up a new Node.js
-    npm install prompt-sync: for install prompt
+    - npm init -y: create package.json --> setting up a new Node.js
 
-    body-parser: is a middleware used in Express to read and parse incoming request data
-    
-    mongoose: promise-based object data modeling (ODM) library for the Node.js framework,
+    - body-parser: is a middleware used in Express to read and parse incoming request data
+
+    - mongoose: promise-based object data modeling (ODM) library for the Node.js framework,
         and it is modole in npm has a lot of functionality to intercat with DB (NoSQL)
 
-    What is The Deffrente Between MongoDb Compass & MongoDb Atlas & Nodemon
+    - MongoDB Compass: is a graphical user interface (GUI) has a lot of features 
+        like databases visually, store data in collection
 
-        - MongoDB Compass: is a graphical user interface (GUI) has a lot of features 
-            like databases visually, store data in collection
+    - MongoDB Atlas:  is a fully managed cloud database service that enables
+        users to easily deploy, manage, and scale MongoDB databases.
 
-        - MongoDB Atlas:  is a fully managed cloud database service that enables
-             users to easily deploy, manage, and scale MongoDB databases.
-
-        - The cloud is like using a service or storing data online instead
-            of on your own computer. You can access it from anywhere with the internet.
-        
-        - Note: the data store in DB as BSON format (like JSON format)
+    - The cloud is like using a service or storing data online instead
+        of on your own computer. You can access it from anywhere with the internet.
     
-        - Nodemon is a utility tool for Node.js applications that automatically restarts the server
-            whenever there are changes to the source code
+    - Note: the data store in DB as BSON format (like JSON format)
+
+    - Nodemon is a tool that automatically restarts your Node.js server
+        whenever you make changes to your code.
+    
+        "you should be installed globally can be used from 
+        anywhere in my system not just within a specific project"
+    
+    - Postman: is tool used to test APIS By sending HTTP Request to APIs
 */
 
-// Inside the Database
-/*
-    - A collection is a group of documents (like JSON objects).
-    - A schema defines the structure of those documents. (filieds, types, ...)
-    - A model is a tool in Mongoose that uses the schema to interact with the collection.
-*/
 
 
 // Life Cycle Transfer the Data to DB:
 /*
     To store user data in MongoDB you need to:
-        - Create a server to handle requests. --> use Express
-        - Send requests to the server. --> server send data to DB
-        - The server will then store the data in MongoDB. --> You can use MongoDB Compass to view and manage the data
+        - Create a API to handle requests that come from Postman --> use Express
+        - Send Request with Postman to API that created
+        - API send data to DB
 
-    In Details:
-        define Routes (POST, GET, PUT, PATCH) --> with server
+    In Details in API:
+        The API contains routes (like GET, POST, PUT, DELETE) to handle different types of requests.
         Use PostMan to send request Database:
             "http://localhost:3000/post"
             "http://localhost:3000/get"
             "http://localhost:3000/put"
             "http://localhost:3000/patch"
-        Run the App and make server listen to post 3000
 */
-
-// Deal With DB
-/*
-    To CRUD from DB:
-        POST /api/tasks : add Data to DB
-        GET /api/tasks : Get the Data from DB
-        PUT /api/tasks/:id : Update Date in DB 
-        DELETE /api/tasks/:id: Delete from DB
-*/
-
-
-
-
-
-
-
 
 
 https://medium.com/@tomorchandraroy884/how-to-connect-mongodb-with-node-js-using-mongoose-a0c772dfb1ca
-
-
-
-=======
-// npm init
-// npm install prompt-sync
-// npm install body-parser
-// npm install express
-// npm install mongoose
-// npm install -g nodemon --> installed globally
-
-
-/*
-    npm init -y: create package.json --> setting up a new Node.js
-    npm install prompt-sync: for install prompt
-
-    body-parser: is a middleware used in Express to read and parse incoming request data
-    
-    mongoose: is module in npm package contain a lot
-        of functionality to deal with DB
-
-    What is The Deffrente Between MongoDb Compass & MongoDb Atlas & Nodemon
-
-        - MongoDB Compass: is a graphical user interface (GUI) has a lot of features 
-            like databases visually, providing features like data exploration,
-            querying, schema analysis, and performance monitoring.*
-
-        - MongoDB Atlas:  is a fully managed cloud database service that enables
-             users to easily deploy, manage, and scale MongoDB databases.
-
-        - The cloud is like using a service or storing data online instead
-            of on your own computer. You can access it from anywhere with the internet.
-        
-        - Note: the data store in DB as BSON format (like JSON format)
-    
-        - Nodemon is a utility tool for Node.js applications that automatically restarts the server
-            whenever there are changes to the source code
-*/
-
-
-
-// Life Cycle Transfer the Data to DB:
-/*
-    To store user data in MongoDB (using Compass for managing the data), you need to:
-
-        - Create a server to handle requests. --> use Express
-        - Send requests to the server. --> server send data to DB
-        - The server will then store the data in MongoDB. --> You can use MongoDB Compass to view and manage the dat
-*/
-
-// Deal With DB
-/*
-    To CRUD from DB:
-        POST /api/tasks : add Data to DB
-        GET /api/tasks : Get the Data from DB
-        PUT /api/tasks/:id : Update Date in DB 
-        DELETE /api/tasks/:id: Delete from DB
-*/
-
-// Details in CRUD with DB
-/*
-    1. Store Data in the Database: First, you send a request 
-        (like a POST request) to the server to store data in the database.
-
-    2. Server Handles the Request: The server processes
-        the request and performs the CRUD operation on the database. For example:
-        For adding data: It uses POST to store data.
-        For fetching data: It uses GET to retrieve data.
-        For updating data: It uses PUT to modify data.
-        For deleting data: It uses DELETE to remove data.
-    
-    3. Send Response Back from DB to Server.
-*/
 
 
 // More Concepts
@@ -162,4 +67,3 @@ https://medium.com/@tomorchandraroy884/how-to-connect-mongodb-with-node-js-using
 */
 
 
->>>>>>> 8f418deae003e54f31a97314a9390010648f3265:src.txt
