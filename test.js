@@ -36,8 +36,6 @@ const PORT = 3000; // Default Port of Express
 api.use(body_parser.json());
 
 
-
-
 // Create Routes
 api.post("/post", async (request, response) => {
     console.log("Request Comme Succefully From Postman [POST]");
@@ -64,13 +62,15 @@ api.get("/get", (request, response) => {
 
     console.log("Request Comme Succefully From Postman [GET]");
 
-    Product.find().then(products => {
-        response.json(products);
-        console.log("🎉 The Products are: \n", products[0]["id"]);
-    }).catch(err => {
-        console.error(err);
-        response.status(500).json({ error: 'Internal Server Error' });
-    });
+    // Product.find().then(products => {
+    //     response.json(products);
+    //     console.log("🎉 The Products are: \n", products[0]["id"]);
+    // }).catch(err => {
+    //     console.error(err);
+    //     response.status(500).json({ error: 'Internal Server Error' });
+    // });
+    console.log(Product.find({name: "Ahmed"}));
+
 });
 
 
@@ -129,6 +129,7 @@ api.put("/put", async (request, response) => {
         response.status(500).send({message: "No Product in Database"})
     }
 });
+
 
 
 
