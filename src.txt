@@ -10,6 +10,15 @@
 /*
     - npm init -y: create package.json --> setting up a new Node.js
 
+    - Depencies in package.json:
+        The dependencies object is used to declare the versions of packages that your project used
+        "dependencies": {
+            "express": "^4.17.1",
+            "mongoose": "^5.10.17",
+            "body-parser": "^1.19.0"
+        }
+        this project used (express, mongoose, body-parser)
+
     - body-parser: is a middleware used in Express to read and parse incoming request data
 
     - mongoose: promise-based object data modeling (ODM) library for the Node.js framework,
@@ -51,13 +60,46 @@
             "http://localhost:3000/get"
             "http://localhost:3000/put"
             "http://localhost:3000/patch"
+        in routes you can use REGEX
+            we can use: /ab*cd --> ab234cd
 */
 
 
-https://medium.com/@tomorchandraroy884/how-to-connect-mongodb-with-node-js-using-mongoose-a0c772dfb1ca
+// API vs REST API vs REST API
+/*
+    API refres to any interface that allows different 
+        software to communicate with each others.
+        can be implemnet with a lot of protocoles like (REST, SOAP, ...)
+
+    (REST): Representational State Transfer architectural style
+
+    REST API:
+        is an API that uses the REST architectural style to provide an interface betwen 
+        specific type of API that use HTTP methods (GET, POST, PUT, DELETE, ...)
+    RESTFULLAPI:
+        is RESTAPI that follows all principles of REST architect
+*/
 
 
-// More Concepts
+// HTTP Methods
+/*
+    GET: get data from Database
+    DELETE: delete specific fields with id
+    PUT: update resource
+    PATCH: update specific fields
+    POST: put the data into Database
+*/
+
+
+// async && await
+/*
+    I am  sending a request to the server, and the server uses async and await
+    to wait database finish tasks (save data, ...) before responding.
+    Once Database Complete, the server sends a response to Postman.
+*/
+
+
+// More Concepts About Database
 /*
     - Schema: Defines the structure of the data (fields and types).
     - Model: Represents a collection in the database and provides
@@ -67,3 +109,8 @@ https://medium.com/@tomorchandraroy884/how-to-connect-mongodb-with-node-js-using
 */
 
 
+
+
+
+https://medium.com/@ralphplacide/lets-build-a-simple-api-with-express-and-mongodb-5e9aae53add0
+https://medium.com/@tomorchandraroy884/how-to-connect-mongodb-with-node-js-using-mongoose-a0c772dfb1ca
