@@ -62,11 +62,11 @@ app.get("/api/tasks", async (request, response) => {
 app.put("/api/tasks/:id", async (request, response) => {
     
     const id = Number(request.params.id);
-    // const newTask = request.body;
+    const newTask = request.body;
     try {
         const UpdatedData = await Task.findByIdAndUpdate(id, newTask);
-        const SavedData = await newTask.save();
-        console.log(UpdatedData);
+        response.status(200).send({message: "✅ Data Updated Succefully"});
+        console.log("✅ Data Updated Succefully");
     } catch (error) {
         console.log("❌ Failed Update Data" + error);
         response.status(500).send({message: "❌ Failed Update Data"});
