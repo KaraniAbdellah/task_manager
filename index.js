@@ -5,18 +5,13 @@ const Task = require("./models/Task");
 mongoose.connect("mongodb://127.0.0.1:27017/Tasks").then(() => {
     console.log("✅ Connected Succefully to Database");
 }).catch((err) => {
-    console.log("❌ Can Not Connect to Database");
+    console.log("❌ Can Not Connect to Database" + err);
 });
-
-console.log(Task);
 
 
 
 // Use Routes
 const App = require("./routes/routes");
-
-
-
 
 
 
