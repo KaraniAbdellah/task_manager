@@ -18,8 +18,7 @@ app.use(body_parser.json());
 // Create POST Method
 app.post("/api/tasks", async (request, response) => {
 
-    console.log("🕵️‍♀️ Request Comme From Postman to GET Method");
-    
+    console.log("🕵️‍♀️ Request Comme From Postman [GET Method]");
     const task = new Task({
         _id: request.body._id,
         title: request.body.title,
@@ -46,6 +45,7 @@ app.post("/api/tasks", async (request, response) => {
 // Create GET Method
 app.get("/api/tasks", async (request, response) => {
 
+    console.log("🕵️‍♀️ Request From Postman [GET Method]");
     try {
         const tasks = await Task.find();
         console.log(tasks);
@@ -61,6 +61,7 @@ app.get("/api/tasks", async (request, response) => {
 // Create Post Method
 app.put("/api/tasks/:id", async (request, response) => {
     
+    console.log("🕵️‍♀️ Request From Postman [PUT Method]");
     const id = Number(request.params.id);
     const newTask = request.body;
     try {
@@ -68,13 +69,31 @@ app.put("/api/tasks/:id", async (request, response) => {
         response.status(200).send({message: "✅ Data Updated Succefully"});
         console.log("✅ Data Updated Succefully");
     } catch (error) {
-        console.log("❌ Failed Update Data" + error);
-        response.status(500).send({message: "❌ Failed Update Data"});
+        console.log("❌ Failed Updating Data" + error);
+        response.status(500).send({message: "❌ Failed Updating Data"});
     }
 
 });
 
 
+
+// Create Delete Method
+app.delete("/api/tasks/:id", async (request, reponse) => {
+    console.log("😐 Request From Postman [DELETE Method]");
+
+    const id = request.params.id;
+
+    try {
+        const deletedTask = await Task.findByIdAndDelete(id);
+        console.log("Sucess Deleting Data");
+        reponse.status(500).send({message: "✅ Sucess Deleting Data"});
+    } catch (error) {
+        console.log("❌ Failed Deleting Data" + error);
+        reponse.status(500).send({message: "❌ Failed Deleting Data"});
+    }
+
+
+});
 
 
 // Make API Active
