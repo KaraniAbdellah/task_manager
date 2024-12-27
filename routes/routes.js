@@ -50,7 +50,9 @@ app.get("/api/tasks", async (request, response) => {
         const tasks = await Task.find();
         console.log(tasks);
         response.status(200).send({message: "✅ Get Data Succefully"});
+        console.log("✅ Get Data Succefully");
     } catch (error) {
+        console.log("❌ Failed Getting Data");
         console.log("❌ Failed Getting Data");
     }
 
@@ -91,7 +93,6 @@ app.delete("/api/tasks/:id", async (request, reponse) => {
         console.log("❌ Failed Deleting Data" + error);
         reponse.status(500).send({message: "❌ Failed Deleting Data"});
     }
-
 
 });
 

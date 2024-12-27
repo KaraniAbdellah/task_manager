@@ -109,6 +109,32 @@
 */
 
 
+// Router
+/*
+    Router behaves like middleware itself, so you
+        can use it as an argument to app.use()
+    
+    - api.js
+        const { router } = require("./router"); // router.js has all HTTP methods
+        api.use("/user/", router);
+
+    - router.js:
+        const express = require("express");
+        const router = express.Router();
+        router.get("/", (req, res) => {
+            console.log("Request Sended from postman [GET]");
+        });
+        exports.router = router;
+
+    - postman:
+        http://127.0.0.1:3000/user
+*/
+
+
+// create NoSQL Data Model Diagram
+/*
+    we are stored as collections of documents, 
+*/
 
 
 
