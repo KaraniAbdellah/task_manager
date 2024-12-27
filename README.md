@@ -8,8 +8,14 @@
 This is a back-end application called **task_manager**. It manages tasks with basic operations like creating, reading, updating, and deleting tasks through an API.
 
 # Images
+
+## Postman
 <img src="./imgs/Capture d&apos;écran 2024-12-27 123452.png">
+
+## MongoDb Compass
 <img src="./imgs/Capture d&apos;écran 2024-12-27 123505.png">
+
+## Terminal
 <img src="./imgs/Capture d&apos;écran 2024-12-27 123522.png">
 
 # Operations
