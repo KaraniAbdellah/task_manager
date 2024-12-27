@@ -31,7 +31,7 @@ app.post("/api/tasks", async (request, response) => {
     try {
         console.log(task);
         const AddedTask = await task.save();
-        response.send.status(200).send({message: "💾 Sucess Saving Data"});
+        response.status(200).send({message: "💾 Sucess Saving Data"});
         console.log("💾 Sucess Saving Data");
     } catch (error) {
         console.log("❌ Can not save data to Database" + error);
