@@ -18,6 +18,7 @@ app.use(body_parser.json());
 // Create POST Method
 app.post("/api/tasks", async (request, response) => {
 
+    console.log("--------------------------------------------------------");
     console.log("🕵️‍♀️ Request Comme From Postman [GET Method]");
     const task = new Task({
         _id: request.body._id, // can not change the Id (primary key)
@@ -45,6 +46,7 @@ app.post("/api/tasks", async (request, response) => {
 // Create GET Method
 app.get("/api/tasks", async (request, response) => {
 
+    console.log("--------------------------------------------------------");
     console.log("🕵️‍♀️ Request From Postman [GET Method]");
     try {
         const tasks = await Task.find();
@@ -63,6 +65,7 @@ app.get("/api/tasks", async (request, response) => {
 // Create Post Method
 app.put("/api/tasks/:id", async (request, response) => {
     
+    console.log("--------------------------------------------------------");
     console.log("🕵️‍♀️ Request From Postman [PUT Method]");
     const id = Number(request.params.id);
     const newTask = request.body;
@@ -81,10 +84,10 @@ app.put("/api/tasks/:id", async (request, response) => {
 
 // Create Delete Method
 app.delete("/api/tasks/:id", async (request, reponse) => {
+
+    console.log("--------------------------------------------------------");
     console.log("😐 Request From Postman [DELETE Method]");
-
     const id = request.params.id;
-
     try {
         const deletedTask = await Task.findByIdAndDelete(id);
         console.log("Sucess Deleting Data");
