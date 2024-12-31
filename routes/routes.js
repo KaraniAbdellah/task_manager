@@ -25,6 +25,7 @@ app.post("/api/tasks", async (request, response) => {
         title: request.body.title,
         description: request.body.description,
         status: request.body.status,
+        completed: request.body.completed
     });
     // const task = new Task(request.body);
     
@@ -49,7 +50,7 @@ app.get("/api/tasks", async (request, response) => {
     console.log("--------------------------------------------------------");
     console.log("🕵️‍♀️ Request From Postman [GET Method]");
     try {
-        const tasks = await Task.find();
+        const tasks = await Task.find({completed: true});
         console.log(tasks);
         response.status(200).send({message: "✅ Get Data Succefully"});
         console.log("✅ Get Data Succefully");

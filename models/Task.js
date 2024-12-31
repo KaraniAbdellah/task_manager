@@ -16,6 +16,10 @@ const Schema = new mongoose.Schema({
         required: true,
     },
     status: String,
+    completed:  {
+        type: Boolean,
+        default: false
+    }
 });
 
 // Create Collection or Model
